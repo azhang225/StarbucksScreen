@@ -27,7 +27,9 @@ public class App {
                 case 1:
                     newDrinkList.viewDrinkMenu();
                     break;
-
+                case 2:
+                    newDrinkList.viewOrder();
+                    break;
                 default:
                     System.out.println("Exiting Program...");
                     System.exit(0);

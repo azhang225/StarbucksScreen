@@ -70,6 +70,7 @@ public class DrinksList {
 
         while (true) {
             // creates the top of menu
+            System.out.println("Espresso Drinks: \n");
             display();
         
             espressoList.clear(); // reset before each display
@@ -85,91 +86,128 @@ public class DrinksList {
             }
 
             // returns the previous menu
-            System.out.println("\nEnter 0 to go back to the previous menu:");
+            System.out.print("\nPlease select a drink or enter 0 to go to previous menu: ");
             int input = myScanner.nextInt();
             if (input == 0){ 
                 clearScreen();
                 break;
             }else if (input > 0 && input <= espressoList.size()){
-                
+                addDrinkToOrder(input, espressoList);
+            }else{
+                System.out.println("Invalid option, please try again. \n");
             }
-)
         }
     }
 
     // displays all blended type drinks
     public void viewBlendedBeverages(){
+
+        // creates a blended list in this scope
+        List<Drinks> blendedList = new ArrayList<>();
+
         while (true) {
             // creates the top of menu
+            System.out.println("Blended Beverages: \n");
             display();
 
+            blendedList.clear();
+            
             // counter for the menu
             int i = 1;
             // displays all the drinks avaiable
             for (Drinks drink : drinks) {
-                if (drink.getType().equalsIgnoreCase("Blended")) {
+                if (drink.getType().equalsIgnoreCase("Blended")){
+                    blendedList.add(drink);
                     System.out.printf("%-5d %-25s $%5.2f%n", i, drink.getName(), drink.getAmount());
                     i++;
                 }
             }
 
-            // returns the previous menu
-            System.out.println("\nEnter 0 to go back to the previous menu:");
+            System.out.print("\nPlease select a drink or enter 0 to go to previous menu: ");
             int input = myScanner.nextInt();
-
-            if (input == 0){
+            if (input == 0){ 
                 clearScreen();
                 break;
+            }else if (input > 0 && input <= blendedList.size()){
+                addDrinkToOrder(input, blendedList);
+            }else{
+                System.out.println("Invalid option, please try again. \n ");
             }
+
         }
     }
     // displays all brewed type drinks
     public void viewBrewed(){
         while (true) {
+
+            // creates a brewed in this scope
+            List<Drinks> brewedList = new ArrayList<>();
+
             // creates the top of menu
+            System.out.println("Brewed Drinks: \n");
             display();
+
+            brewedList.clear();
 
             // counter for the menu
             int i = 1;
             // displays all the drinks avaiable
             for (Drinks drink : drinks) {
                 if (drink.getType().equalsIgnoreCase("Brewed")) {
+                    brewedList.add(drink);
                     System.out.printf("%-5d %-25s $%5.2f%n", i, drink.getName(), drink.getAmount());
                     i++;
                 }
             }
 
             // returns the previous menu
-            System.out.println("\nEnter 0 to go back to the previous menu:");
+            System.out.print("\nPlease select a drink or enter 0 to go to previous menu: ");
             int input = myScanner.nextInt();
-            if (input == 0) 
-             clearScreen();
-             break;
+            if (input == 0){ 
+                clearScreen();
+                break;
+            }else if (input > 0 && input <= brewedList.size()){
+                addDrinkToOrder(input, brewedList);
+            }else{
+                System.out.println("Invalid option, please try again. \n ");
+            }
         }
     }
     
     // displays all iced beverages type drinks
     public void viewIcedBeverages(){
-        while (true) {
+        while (true){
+
+            // creates a ice beverage list in this scope
+            List<Drinks> icedBevList = new ArrayList<>();
+
             // creates the top of menu
+            System.out.println("Ice Beverages: \n");
             display();
+
+            icedBevList.clear();
 
             // counter for the menu
             int i = 1;
             // displays all the drinks avaiable
             for (Drinks drink : drinks) {
                 if (drink.getType().equalsIgnoreCase("Iced Beverage")) {
+                    icedBevList.add(drink);
                     System.out.printf("%-5d %-25s $%5.2f%n", i, drink.getName(), drink.getAmount());
                     i++;
                 }
             }
 
             // returns the previous menu
-            System.out.println("\nEnter 0 to go back to the previous menu:");
+            System.out.print("\nPlease select a drink or enter 0 to go to previous menu: ");
             int input = myScanner.nextInt();
-            if (input == 0){
+            if (input == 0){ 
                 clearScreen();
                 break;
+            }else if (input > 0 && input <= icedBevList.size()){
+                addDrinkToOrder(input, icedBevList);
+            }else{
+                System.out.println("Invalid option, please try again. \n ");
             }
         }
     }
@@ -194,16 +232,24 @@ public class DrinksList {
         
     }
 
+    // views the order
+    public void viewOrder(){
+        newOrder.viewOrder();
+    }
+
+
     public void display(){
            // creates the top of menu
-            System.out.println("Espresso Drinks:");
             System.out.printf("%-5s %-25s %-10s%n", "No.", "Drink Name", "Price");
             System.out.println("------------------------------------------------");
     }
 
     // add drink to order
-    public void addDrinkToOrder(Drinks drink){
-        
+    public void addDrinkToOrder(int input, List<Drinks> list){
+        // add the drink to order
+        newOrder.addDrinkToOrder(list.get(input - 1));
+        // notifies that the drink has been added to user
+        System.out.println(list.get(input - 1).getName() + " has been added to the order.");
     }
 
     // load drink menu from file 

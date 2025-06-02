@@ -12,7 +12,7 @@ public class OrderList {
     public void viewOrder(){
         while (true) {
             // creates the top of menu
-            System.out.println("Espresso Drinks:");
+            System.out.printf("%30s%n","Current Order\n");
             System.out.printf("%-5s %-25s %-10s%n", "No.", "Drink Name", "Price");
             System.out.println("------------------------------------------------");
 
@@ -23,18 +23,37 @@ public class OrderList {
                 System.out.printf("%-5d %-25s $%5.2f%n", i, drink.getName(), drink.getAmount());
                 i++;
                 }
+            System.out.println("------------------------------------------------");
+            System.out.println("Total: $" + calcTotal());
 
             // returns the previous menu
             System.out.println("\nEnter 0 to go back to the previous menu:");
             int input = myScanner.nextInt();
+             if (input == 0){
+                clearScreen();
+                break;
+            }
 
         }
+    }
+
+    // adds the drink to the order
+    public void addDrinkToOrder(Drinks drink){
+        orderList.add(drink);
     }
 
     // helper function to clear user input
     public static void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
+    }
+
+    private double calcTotal(){
+        double total = 0.00;
+         for(Drinks drink: orderList){
+            total += drink.getAmount();
+        }
+        return total;
     }
 }
 
