@@ -1,0 +1,27 @@
+Espresso,2.25,Espresso
+Latte,5.25,Espresso
+Cappuccino,4.95,Espresso
+Americano,4.75,Espresso
+Flat White,5.00,Espresso
+Caramel Macchiato,5.50,Espresso
+Espresso Frappu,6.50,Blended
+Coffee Frappu,5.00,Blended
+Caramel Frappu,5.50,Blended
+Mocha Frappu,5.50,Blended
+Vanilla Bean Frappu,5.50,Blended
+Java Chip Frappu,5.75,Blended
+Matcha Frappu,5.50,Blended
+Iced Green Tea,3.25,Iced Beverage
+Iced Black Tea,3.25,Iced Beverage
+Iced Coffee,3.75,Iced Beverage
+Iced Cold Brew,3.50,Iced Beverage
+Iced Nitro Cold Brew,4.25,Iced Beverage
+Iced Matcha Late,4.50,Iced Beverage
+Lemonade,2.75,Iced Beverage
+Apple Juice,2.75,Iced Beverage
+Blonde Roast,2.75,Brewed
+Medium Roast,2.75,Brewed
+Dark Roast,2.75,Brewed
+Hot Green Tea,2.95,Brewed
+Hot Black Tea,2.75,Brewed
+Hot Herbal Tea,2.75,Brewed
