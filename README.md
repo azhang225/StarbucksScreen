@@ -1,15 +1,22 @@
 ## Stage 1 : Create a Text Based Menu
-- [ ] Create Initial Menu
-- [ ] Create Intial Classes
-- [ ] Create an Order Class
-- [ ] Create a Drink Class
-- [ ] Add Drinks to Order
-- [ ] View order
-- [ ] Display total amount
-- [ ] Create Drinks to add to Menu
+- [x] Create Initial Menu
+- [x] Create Intial Classes
+- [x] Create an Order Class
+- [x] Create a Drink Class
+### Phase 1: Order
+- [x] Add drinks to Order
+- [ ] View order with modification
+- [x] Create a new Order
+- [x] Display total amount
 - [ ] Process the Actual Order
-- [ ] Create a new Order
-- [ ] Cusotmize the Drinks
+- [ ] Display the change and return to main menu
+### Phase 2: Drinks
+- [x] Create a file with all avaiable drinks
+- [x] Define type of drinks
+- [x] Create separate drinks menu for types of drinks
+- [x] Create new drinks to add to Menu
+### Phase 3: Ingredients
+- [ ] Customize the Drinks
 - [ ] Create a Ingrdients/Recipe Class
 - [ ] Add Recipe and Ingredients to Drinks
 
