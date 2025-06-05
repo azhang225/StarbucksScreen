@@ -10,6 +10,7 @@ public class OrderList {
 
     // prints out the order so far 
     public void viewOrder(){
+        double total = calcTotal();
         while (true) {
             // creates the top of menu
             System.out.printf("%30s%n","Current Order\n");
@@ -24,14 +25,22 @@ public class OrderList {
                 i++;
                 }
             System.out.println("------------------------------------------------");
-            System.out.println("Total: $" + calcTotal());
+              System.out.printf("Total: $ %.2f\n\n", + total);
 
-            // returns the previous menu
-            System.out.println("\nEnter 0 to go back to the previous menu:");
+            System.out.println("1. Pay for Order");
+            System.out.println("0. Return to previous menu.");
             int input = myScanner.nextInt();
-             if (input == 0){
-                clearScreen();
-                break;
+            switch (input) {
+                case 1:
+                // pays for the order
+                    clearScreen();
+                    payForOrder(total);
+                    break;
+                case 0:
+                    return; 
+                default:
+                    System.out.println("Invalid input, please select another option");
+                    break;
             }
 
         }
@@ -40,6 +49,13 @@ public class OrderList {
     // adds the drink to the order
     public void addDrinkToOrder(Drinks drink){
         orderList.add(drink);
+    }
+    
+    // process the order
+    private void payForOrder(double total){
+        System.out.printf("You total is: $%.2f\n\n", + total);
+        System.out.println("1. Cash");
+        System.out.println("2. Credit/Debit");
     }
 
     // helper function to clear user input

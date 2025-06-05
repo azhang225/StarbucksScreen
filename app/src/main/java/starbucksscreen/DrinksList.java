@@ -32,6 +32,8 @@ public class DrinksList {
             System.out.println("4. Iced Beverages");
             System.out.println("5. Create a New Drink");
             System.out.println("0. Go Back To Main Menu");
+            
+            System.out.print("\nPlease select a drink or enter 0 to go to previous menu: ");
 
             // takes in user input
             input = myScanner.nextInt();
@@ -248,8 +250,9 @@ public class DrinksList {
     public void addDrinkToOrder(int input, List<Drinks> list){
         // add the drink to order
         newOrder.addDrinkToOrder(list.get(input - 1));
+        clearScreen();
         // notifies that the drink has been added to user
-        System.out.println(list.get(input - 1).getName() + " has been added to the order.");
+        System.out.println(list.get(input - 1).getName() + " has been added to the order.\n");
     }
 
     // load drink menu from file 
