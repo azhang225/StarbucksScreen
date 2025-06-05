@@ -25,17 +25,17 @@ public class OrderList {
                 i++;
                 }
             System.out.println("------------------------------------------------");
-              System.out.printf("Total: $ %.2f\n\n", + total);
+            System.out.printf("Total: $ %.2f\n\n", + total);
 
             System.out.println("1. Pay for Order");
             System.out.println("0. Return to previous menu.");
             int input = myScanner.nextInt();
             switch (input) {
                 case 1:
-                // pays for the order
+                // pays for the order1
                     clearScreen();
                     payForOrder(total);
-                    break;
+                    return;
                 case 0:
                     return; 
                 default:
@@ -50,16 +50,85 @@ public class OrderList {
     public void addDrinkToOrder(Drinks drink){
         orderList.add(drink);
     }
-    
     // process the order
     private void payForOrder(double total){
         System.out.printf("You total is: $%.2f\n\n", + total);
         System.out.println("1. Cash");
         System.out.println("2. Credit/Debit");
+        System.out.println("0. Return to previous menu.");
+    
+        int input = myScanner.nextInt();
+        switch (input) {
+                case 1:
+                // pays for the order
+                    clearScreen();
+                    payCash(total);
+                    return;
+                case 2:
+                    clearScreen();
+                    payCredit();
+                    return;
+                case 0:
+                    return; 
+                default:
+                    System.out.println("Invalid input, please select another option");
+                    break;
+            }
+
+    }
+    
+    private void payCash(double total){
+
+        // rounds the total to the nearest whole number
+        double rounded = Math.ceil(total);
+
+        // gives user the option for selecting cash amount
+        System.out.println("Please select the amount of cash:");
+        System.out.println("1. $1.00");
+        System.out.println("2. $5.00");
+        System.out.println("3. $10.00");
+        System.out.println("4. $20.00");
+        System.out.println("5. Other");
+        System.out.printf("0. $ %.2f\n\n", + rounded);
+
+        int input = myScanner.nextInt();
+
+        //calcualating change and tender the order
+        switch (input) {
+            case 1:
+                calcChange(total, 1.00);
+                break;
+            case 2:
+                calcChange(total, 5.00);
+                break;
+            case 3:
+                calcChange(total, 10.00);
+                break;
+            case 4:
+                calcChange(total, 20.00);
+                break;
+            case 5:
+                calcChange(total, rounded);
+                break;     
+            default:
+                break;
+        }
     }
 
+    private void calcChange(double total, double cashAmount){
+        double result = total - cashAmount;
+        if(result < 0)
+    }
+
+    // if the user pays with card
+    private void payCredit(){
+        orderList.clear();
+        System.out.println("Thank you for your order!\n");
+    }
+    
+
     // helper function to clear user input
-    public static void clearScreen() {
+    private static void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }

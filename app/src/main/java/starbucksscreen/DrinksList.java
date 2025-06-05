@@ -25,7 +25,8 @@ public class DrinksList {
     public void viewDrinkMenu(){
         int input;
             while(true){
-            System.out.println("Drink Categories");
+            System.out.println("\nDrink Categories");
+            System.out.println("------------------------------------------------");
             System.out.println("1. Espresso");
             System.out.println("2. Blended Beverages");
             System.out.println("3. Brewed Beverages");
@@ -72,7 +73,8 @@ public class DrinksList {
 
         while (true) {
             // creates the top of menu
-            System.out.println("Espresso Drinks: \n");
+            System.out.println("\nEspresso");
+            System.out.println("------------------------------------------------");
             display();
         
             espressoList.clear(); // reset before each display
@@ -109,7 +111,8 @@ public class DrinksList {
 
         while (true) {
             // creates the top of menu
-            System.out.println("Blended Beverages: \n");
+            System.out.println("\nBlended Beverages");
+            System.out.println("------------------------------------------------");
             display();
 
             blendedList.clear();
@@ -146,7 +149,8 @@ public class DrinksList {
             List<Drinks> brewedList = new ArrayList<>();
 
             // creates the top of menu
-            System.out.println("Brewed Drinks: \n");
+            System.out.println("\nBrewed Beverages");
+            System.out.println("------------------------------------------------");
             display();
 
             brewedList.clear();
@@ -184,7 +188,8 @@ public class DrinksList {
             List<Drinks> icedBevList = new ArrayList<>();
 
             // creates the top of menu
-            System.out.println("Ice Beverages: \n");
+            System.out.println("\nIced Beverages");
+            System.out.println("------------------------------------------------");
             display();
 
             icedBevList.clear();
