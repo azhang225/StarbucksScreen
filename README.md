@@ -1,13 +1,15 @@
-## Stage 1
--[ ] Create Initial Menu
--[ ] Create Intial Classes
-    -[ ] Create an Order Class
-### Function that might be needed
-        -[ ] Add drink to order
-        -[ ] View order
-        -[ ] Display total amount
-    -[] Create a Drink Class
-### Function that might be needed
-        -[ ] Constructor for Drink
-        -[ ] Create a Drink List
-        -[ ] Add a new drink to Drink List
+## Stage 1 : Create a Text Based Menu
+- [ ] Create Initial Menu
+- [ ] Create Intial Classes
+- [ ] Create an Order Class
+- [ ] Create a Drink Class
+- [ ] Add Drinks to Order
+- [ ] View order
+- [ ] Display total amount
+- [ ] Create Drinks to add to Menu
+- [ ] Process the Actual Order
+- [ ] Create a new Order
+- [ ] Cusotmize the Drinks
+- [ ] Create a Ingrdients/Recipe Class
+- [ ] Add Recipe and Ingredients to Drinks
+
