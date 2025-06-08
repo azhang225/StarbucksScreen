@@ -257,7 +257,7 @@ public class DrinksList {
         newOrder.addDrinkToOrder(list.get(input - 1));
         clearScreen();
         // notifies that the drink has been added to user
-        System.out.println(list.get(input - 1).getName() + " has been added to the order.\n");
+        System.out.println(list.get(input - 1).getName() + " has been added to the order.");
     }
 
     // load drink menu from file 

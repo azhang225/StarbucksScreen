@@ -16,7 +16,7 @@ public class App {
        // loops until it exits by user
         while(true){
             System.out.printf("%30s%n","Main Menu");
-            System.out.println("------------------------------------------------\n");
+            System.out.println("------------------------------------------------");
             System.out.println("1. Order A Drink");
             System.out.println("2. View Order");
             System.out.println("0. Exit Program");

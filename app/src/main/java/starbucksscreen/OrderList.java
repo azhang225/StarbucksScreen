@@ -55,7 +55,9 @@ public class OrderList {
         System.out.printf("You total is: $%.2f\n\n", + total);
         System.out.println("1. Cash");
         System.out.println("2. Credit/Debit");
-        System.out.println("0. Return to previous menu.");
+        System.out.println("0. Return to previous menu.\n");
+        System.out.println("Please select which payment method you would like to use:" );
+
     
         int input = myScanner.nextInt();
         switch (input) {
@@ -88,8 +90,8 @@ public class OrderList {
         System.out.println("2. $5.00");
         System.out.println("3. $10.00");
         System.out.println("4. $20.00");
-        System.out.println("5. Other");
-        System.out.printf("0. $ %.2f\n\n", + rounded);
+        System.out.printf("5. $%.2f\n\n", + rounded);
+        System.out.println("Please select how much cash you want to pay with:" );
 
         int input = myScanner.nextInt();
 
@@ -109,21 +111,31 @@ public class OrderList {
                 break;
             case 5:
                 calcChange(total, rounded);
-                break;     
+                break; 
             default:
                 break;
         }
     }
 
+    // Returns the change and thanks the user for buying the drinks
     private void calcChange(double total, double cashAmount){
         double result = total - cashAmount;
-        if(result < 0)
+        if(result <= 0){
+            clearScreen();
+            System.out.printf("Your change is: $%.2f\n", + Math.abs(result));
+            System.out.println("Thank you for your purchase. Enjoy your drink(s).\n");
+        }else{
+            clearScreen();
+            System.out.printf("Your remaining total is: $%.2f\n", + Math.abs(result));
+            // recurring method if need to pay more
+            payCash(result);
+        }
     }
 
     // if the user pays with card
     private void payCredit(){
         orderList.clear();
-        System.out.println("Thank you for your order!\n");
+        System.out.println("Thank you for your purchase. Enjoy your drink(s).\n");
     }
     
 
