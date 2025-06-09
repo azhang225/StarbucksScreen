@@ -37,6 +37,7 @@ public class Drinks {
         return name + "," + amount + "," + type ;
     }
 
+    // formats the the file 
     public static Drinks fromFileString(String line) {
         String[] parts = line.split(",");
         return new Drinks(parts[0], Double.parseDouble(parts[1]), parts[2]);

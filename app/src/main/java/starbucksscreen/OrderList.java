@@ -126,7 +126,7 @@ public class OrderList {
             System.out.println("Thank you for your purchase. Enjoy your drink(s).\n");
         }else{
             clearScreen();
-            System.out.printf("Your remaining total is: $%.2f\n", + Math.abs(result));
+            System.out.printf("Your remaining total is: $%.2f", + Math.abs(result));
             // recurring method if need to pay more
             payCash(result);
         }
