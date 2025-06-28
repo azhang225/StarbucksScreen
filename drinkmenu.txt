@@ -1,27 +1,27 @@
-Espresso,2.25,Espresso
-Latte,5.25,Espresso
-Cappuccino,4.95,Espresso
-Americano,4.75,Espresso
-Flat White,5.00,Espresso
-Caramel Macchiato,5.50,Espresso
-Espresso Frappu,6.50,Blended
-Coffee Frappu,5.00,Blended
-Caramel Frappu,5.50,Blended
-Mocha Frappu,5.50,Blended
-Vanilla Bean Frappu,5.50,Blended
-Java Chip Frappu,5.75,Blended
-Matcha Frappu,5.50,Blended
-Iced Green Tea,3.25,Iced Beverage
-Iced Black Tea,3.25,Iced Beverage
-Iced Coffee,3.75,Iced Beverage
-Iced Cold Brew,3.50,Iced Beverage
-Iced Nitro Cold Brew,4.25,Iced Beverage
-Iced Matcha Late,4.50,Iced Beverage
-Lemonade,2.75,Iced Beverage
-Apple Juice,2.75,Iced Beverage
-Blonde Roast,2.75,Brewed
-Medium Roast,2.75,Brewed
-Dark Roast,2.75,Brewed
-Hot Green Tea,2.95,Brewed
-Hot Black Tea,2.75,Brewed
-Hot Herbal Tea,2.75,Brewed
+Espresso,2.25,Espresso,Espresso:Espresso:2:0.0
+Latte,4.25,Espresso,Dairy:2%:0:0.0|Espresso:Espresso:2:0.0
+Cappuccino,4.95,Espresso,Dairy:2%:0:0.0|Espresso:Espresso:2:0.0
+Americano,4.75,Espresso,Other:Water:0:0.0|Espresso:Espresso:3:0.0
+Flat White,5.00,Espresso,Espresso,Dairy:Whole:0:0.0|Espresso:Ristretto:3:0.0
+Caramel Macchiato,5.50,Espresso,Dairy:2%:0:0.0|Espresso:Espresso:2:0.0|Syrup:Vanilla:3:0.0
+Espresso Frappu,6.50,Blended,Dairy:Whole:0:0.0|Espresso:Espresso:1:0.0
+Coffee Frappu,5.00,Blended,Dairy:Whole:0:0.0
+Caramel Frappu,5.50,Blended,Dairy:Whole:0:0.0|Syrup:Caramel:3:0.0
+Mocha Frappu,5.50,Blended,Dairy:Whole:0:0.0|Sauce:Mocha:3:0.0
+Vanilla Bean Frappu,5.50,Blended,Dairy:Whole:0:0.0|Powder:Vanilla Bean:3:0.0
+Java Chip Frappu,5.75,Blended,Dairy:Whole:0:0.0|Other:Java Chips:3:0.0
+Matcha Frappu,5.50,Blended,Dairy:Whole:0:0.0|Powder:Matcha:3:0.0|Syrup:Simple:3:0.0
+Iced Green Tea,3.25,Iced Beverage,Tea:Green Tea:0:0.0|Other:Water:0:0.0
+Iced Black Tea,3.25,Iced Beverage,Tea:Green Tea:0:0.0|Other:Water:0:0.0
+Iced Coffee,3.75,Iced Beverage,Coffee:Iced Coffee:0:0.0
+Iced Cold Brew,3.50,Iced Beverage,Coffee:Cold Brew:0:0.0
+Iced Nitro Cold Brew,4.25,Iced Beverage,Coffee:Cold Brew:0:0.0
+Iced Matcha Late,4.50,Iced Beverage,Dairy:Whole:0:0.0|Powder:Matcha:3:0.0|Syrup:Simple:3:0.0
+Lemonade,2.75,Iced Beverage,Other:Lemonade:0:0.0
+Apple Juice,2.75,Iced Beverage,Other:Apple Juice:0:0.0
+Blonde Roast,2.75,Brewed,Coffee:Brewed Coffee:0:0.0
+Medium Roast,2.75,Brewed,Coffee:Brewed Coffee:0:0.0
+Dark Roast,2.75,Brewed,Coffee:Brewed Coffee:0:0.0
+Hot Green Tea,2.95,Brewed,Tea:Brewed Tea:0:0.0
+Hot Black Tea,2.75,Brewed,Tea:Brewed Tea:0:0.0
+Hot Herbal Tea,2.75,Brewed,Tea:Brewed Tea:0:0.0

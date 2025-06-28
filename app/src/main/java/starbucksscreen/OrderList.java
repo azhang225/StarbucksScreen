@@ -22,8 +22,12 @@ public class OrderList {
             // displays all the drinks avaiable
             for (Drinks drink : orderList) {
                 System.out.printf("%-5d %-25s $%5.2f%n", i, drink.getName(), drink.getAmount());
+                    for (Ingredients ing : drink.getIngredients()) {
+                        System.out.printf("        %-1sx %-20s $%5.2f%n",
+                        ing.getAmount(), ing.getIngredientName(), ing.getCost());
+                    }
                 i++;
-                }
+            }
             System.out.println("------------------------------------------------");
             System.out.printf("Total: $ %.2f\n\n", + total);
 
@@ -50,6 +54,7 @@ public class OrderList {
     public void addDrinkToOrder(Drinks drink){
         orderList.add(drink);
     }
+
     // process the order
     private void payForOrder(double total){
         System.out.printf("You total is: $%.2f\n\n", + total);
@@ -123,6 +128,7 @@ public class OrderList {
         if(result <= 0){
             clearScreen();
             System.out.printf("Your change is: $%.2f\n", + Math.abs(result));
+            orderList.clear();
             System.out.println("Thank you for your purchase. Enjoy your drink(s).\n");
         }else{
             clearScreen();
@@ -131,7 +137,7 @@ public class OrderList {
             payCash(result);
         }
     }
-
+    
     // if the user pays with card
     private void payCredit(){
         orderList.clear();

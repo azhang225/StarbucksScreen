@@ -54,9 +54,6 @@ public class DrinksList {
                 case 4: 
                     viewIcedBeverages(); // view all iced drinks
                     break;
-                case 5: 
-                    addDrinks(); // add a new drink
-                    break;
                 case 0:
                     return;
                 default:
@@ -217,26 +214,6 @@ public class DrinksList {
                 System.out.println("Invalid option, please try again. \n ");
             }
         }
-    }
-
-    // add new drinks to the menu
-    public void addDrinks(){
-        System.out.print("What is the new drink called?: ");
-        String name = myScanner.next();
-
-        System.out.print("What is type of drink is this?: ");
-        String type = myScanner.next();
-
-        System.out.print("How much does the drink cost?: ");
-        double amount = myScanner.nextDouble();
-
-        // adds new Drink into the list of Drinks
-        Drinks newDrink = new Drinks(name, amount, type);
-        drinks.add(newDrink);
-
-        //saves the new to file
-        saveDrinkToFile();
-        
     }
 
     // views the order
