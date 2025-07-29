@@ -14,21 +14,21 @@ public class OrderList {
         while (true) {
             // creates the top of menu
             System.out.printf("%30s%n","Current Order\n");
-            System.out.printf("%-5s %-25s %-10s%n", "No.", "Drink Name", "Price");
-            System.out.println("------------------------------------------------");
+           System.out.printf("%-5s %-10s %-25s %-10s%n", "No.", "Size", "Drink Name", "Price");
+            System.out.println("----------------------------------------------------------");
 
             // counter for the l
             int i = 1;
             // displays all the drinks avaiable
             for (Drinks drink : orderList) {
-                System.out.printf("%-5d %-25s $%5.2f%n", i, drink.getName(), drink.getAmount());
+                System.out.printf("%-5d %-10s %-25s $%5.2f%n", i, drink.getSize(), drink.getName(), drink.getAmount());
                     for (Ingredients ing : drink.getIngredients()) {
-                        System.out.printf("        %-1sx %-20s $%5.2f%n",
+                        System.out.printf("%17s %-2sx %-20s $%5.2f%n","", 
                         ing.getAmount(), ing.getIngredientName(), ing.getCost());
                     }
                 i++;
             }
-            System.out.println("------------------------------------------------");
+            System.out.println("----------------------------------------------------------");
             System.out.printf("Total: $ %.2f\n\n", + total);
 
             System.out.println("1. Pay for Order");
