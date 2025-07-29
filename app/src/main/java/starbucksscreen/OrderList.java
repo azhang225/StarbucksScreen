@@ -8,13 +8,11 @@ public class OrderList {
     private Scanner myScanner = new Scanner(System.in);
     private List<Drinks> orderList = new ArrayList<>();
 
-    // prints out the order so far 
-    public void viewOrder(){
-        double total = calcTotal();
-        while (true) {
-            // creates the top of menu
+
+    public void displayOrder(){
+                    // creates the top of menu
             System.out.printf("%30s%n","Current Order\n");
-           System.out.printf("%-5s %-10s %-25s %-10s%n", "No.", "Size", "Drink Name", "Price");
+            System.out.printf("%-5s %-10s %-25s %-10s%n", "No.", "Size", "Drink Name", "Price");
             System.out.println("----------------------------------------------------------");
 
             // counter for the l
@@ -28,6 +26,14 @@ public class OrderList {
                     }
                 i++;
             }
+    }
+
+    // prints out the order so far 
+    public void viewOrder(){
+        double total = calcTotal();
+        while (true) {
+            displayOrder();
+
             System.out.println("----------------------------------------------------------");
             System.out.printf("Total: $ %.2f\n\n", + total);
 
