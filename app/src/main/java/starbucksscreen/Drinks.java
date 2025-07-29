@@ -50,6 +50,10 @@ public class Drinks {
         return name + " - $" + amount;
     }
 
+    public void setAmount(double amount){
+        this.amount = amount;
+    }
+
     // ensures when writing to file, it writes in this form
     public String toFileString() {
         String ingredientStr = ingredients.stream()

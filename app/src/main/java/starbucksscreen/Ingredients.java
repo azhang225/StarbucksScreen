@@ -41,6 +41,14 @@ public class Ingredients {
         return cost;
     }
 
+    public void setAmount(int amount){
+        this.amount = amount;
+    }
+
+    public void setCost(double cost){
+        this.cost = cost;
+    }
+
     // to string format
     @Override
     public String toString() {

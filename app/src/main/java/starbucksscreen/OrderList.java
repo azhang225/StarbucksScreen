@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class OrderList {
     private Scanner myScanner = new Scanner(System.in);
     private List<Drinks> orderList = new ArrayList<>();
-
+    private Custom customzier = new Custom();
 
     public void displayOrder(){
                     // creates the top of menu
@@ -38,6 +38,7 @@ public class OrderList {
             System.out.printf("Total: $ %.2f\n\n", + total);
 
             System.out.println("1. Pay for Order");
+            System.out.println("2. Customize Drink");
             System.out.println("0. Return to previous menu.");
             int input = myScanner.nextInt();
             switch (input) {
@@ -46,6 +47,12 @@ public class OrderList {
                     clearScreen();
                     payForOrder(total);
                     return;
+                case 2:
+                //customize drink
+                    customizeDrink();
+                    total = calcTotal();
+                    System.out.println(total);
+                    break;
                 case 0:
                     return; 
                 default:
@@ -150,6 +157,13 @@ public class OrderList {
         System.out.println("Thank you for your purchase. Enjoy your drink(s).\n");
     }
     
+    public void customizeDrink(){
+        clearScreen();
+        displayOrder();
+        System.out.print("\nWhich drink would you like to customize?: ");
+        int input = myScanner.nextInt();
+        customzier.addShot(orderList.get(0));
+    }
 
     // helper function to clear user input
     private static void clearScreen() {
@@ -161,6 +175,10 @@ public class OrderList {
         double total = 0.00;
          for(Drinks drink: orderList){
             total += drink.getAmount();
+            
+            for (Ingredients ing : drink.getIngredients()) {
+            total += ing.getCost();
+            } 
         }
         return total;
     }
