@@ -10,7 +10,7 @@ public class OrderList {
     private Custom customzier = new Custom();
 
     public void displayOrder(){
-                    // creates the top of menu
+            // creates the top of menu
             System.out.printf("%30s%n","Current Order\n");
             System.out.printf("%-5s %-10s %-25s %-10s%n", "No.", "Size", "Drink Name", "Price");
             System.out.println("----------------------------------------------------------");
@@ -70,7 +70,7 @@ public class OrderList {
 
     // adds the drink to the order
     public void addDrinkToOrder(Drinks drink){
-        orderList.add(drink);
+        orderList.add(drink.copy());
     }
 
     // process the order
@@ -165,9 +165,19 @@ public class OrderList {
     public void customizeDrink(){
         clearScreen();
         displayOrder();
-        System.out.print("\nWhich drink would you like to customize?: ");
-        int input = myScanner.nextInt();
-        customzier.addShot(orderList.get(0));
+        while (true){
+            System.out.print("\nWhich drink would you like to customize? : ");
+            int input = myScanner.nextInt();
+            if(input > 0 && input <= (orderList.size())){
+                customzier.addShot(orderList.get(input - 1));
+                // break out of loop if able to customize
+                break;
+            }
+            else{
+                // will repeat if input is invalid
+                System.out.println("That is an invalid option, please try again.");
+            }
+        }
     }
 
     public void removeDrink(){

@@ -21,6 +21,21 @@ public class Drinks {
         this.ingredients = ingredients;
     }
 
+     public Drinks copy() {
+        // Deep copy of ingredients list
+        List<Ingredients> copiedIngredients = new ArrayList<>();
+        for (Ingredients ing : this.ingredients) {
+            copiedIngredients.add(new Ingredients(
+                ing.getType(),
+                ing.getIngredientName(),
+                ing.getAmount(),
+                ing.getCost()
+            ));
+        }
+
+        return new Drinks(this.name, this.amount, this.type, this.size, copiedIngredients);
+    }
+
     // returns name of drink
     public String getName(){
         return name;
@@ -53,6 +68,7 @@ public class Drinks {
     public void setAmount(double amount){
         this.amount = amount;
     }
+
 
     // ensures when writing to file, it writes in this form
     public String toFileString() {
