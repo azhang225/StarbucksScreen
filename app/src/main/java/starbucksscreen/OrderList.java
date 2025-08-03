@@ -39,6 +39,7 @@ public class OrderList {
 
             System.out.println("1. Pay for Order");
             System.out.println("2. Customize Drink");
+            System.out.println("3. Remove a Drink");
             System.out.println("0. Return to previous menu.");
             int input = myScanner.nextInt();
             switch (input) {
@@ -51,7 +52,11 @@ public class OrderList {
                 //customize drink
                     customizeDrink();
                     total = calcTotal();
-                    System.out.println(total);
+                    break;
+                case 3:
+                // remove a drink
+                    removeDrink();
+                    total = calcTotal();
                     break;
                 case 0:
                     return; 
@@ -163,6 +168,26 @@ public class OrderList {
         System.out.print("\nWhich drink would you like to customize?: ");
         int input = myScanner.nextInt();
         customzier.addShot(orderList.get(0));
+    }
+
+    public void removeDrink(){
+        // displays order
+        clearScreen();
+        displayOrder();
+        // while loop
+        while (true){
+            System.out.print("\nWhich drink would you like to remove? : ");
+            int input = myScanner.nextInt();
+            if(input > 0 && input <= (orderList.size())){
+                orderList.remove(input - 1);
+                // break out of loop if able to remove drink
+                break;
+            }
+            else{
+                // will repeat if input is invalid
+                System.out.println("That is an invalid option, please try again.");
+            }
+        }
     }
 
     // helper function to clear user input
