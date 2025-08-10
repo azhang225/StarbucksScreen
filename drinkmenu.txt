@@ -4,6 +4,8 @@ Cappuccino,4.95,Espresso,Med,Dairy:2%:0:0.0|Espresso:Espresso:2:0.0
 Americano,4.75,Espresso,Med,Other:Water:0:0.0|Espresso:Espresso:3:0.0
 Flat White,5.00,Espresso,Med,Dairy:Whole:0:0.0|Espresso:Ristretto:3:0.0
 Caramel Macchiato,5.50,Espresso,Med,Dairy:2%:0:0.0|Espresso:Espresso:2:0.0|Syrup:Vanilla:3:0.0
+Mocha,5.25,Espresso,Med,Dairy:2%:0:0.0|Espresso:Espresso:2:0.0|Sauce:Mocha:4:0.0|Other:Whipped Cream:1:0.0
+White Mocha,5.50,Espresso,Med,Dairy:2%:0:0.0|Espresso:Espresso:2:0.0|Sauce:White Mocha:4:0.0|Other:Whipped Cream:1:0.0
 Espresso Frappu,6.50,Blended,Med,Dairy:Whole:0:0.0|Espresso:Espresso:1:0.0
 Coffee Frappu,5.00,Blended,Med,Dairy:Whole:0:0.0
 Caramel Frappu,5.50,Blended,Med,Dairy:Whole:0:0.0|Syrup:Caramel:3:0.0

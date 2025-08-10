@@ -1,0 +1,8 @@
+Syrup:Vanilla:1:0.50
+Syrup:Caramel:1:0.50
+Syrup:Hazelnut:1:0.50
+Syrup:Toffeenut:1:0.50
+Syrup:Peppermint:1:0.50
+Syrup:Classic:1:0.50
+Sauce:Mocha:1:0.80
+Sauce:White Mocha:1:0.80

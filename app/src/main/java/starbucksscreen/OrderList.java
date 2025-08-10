@@ -169,7 +169,7 @@ public class OrderList {
             System.out.print("\nWhich drink would you like to customize? : ");
             int input = myScanner.nextInt();
             if(input > 0 && input <= (orderList.size())){
-                customzier.addShot(orderList.get(input - 1));
+                customzier.viewSyrups(orderList.get(input - 1));
                 // break out of loop if able to customize
                 break;
             }

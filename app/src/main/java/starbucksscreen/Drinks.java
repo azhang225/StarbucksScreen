@@ -78,7 +78,7 @@ public class Drinks {
         return name + "," + amount + "," + type + "," + size + "," + ingredientStr;
     }
 
-    // formats the the file 
+    // formats the file back to object
     public static Drinks fromFileString(String line) {
         String[] parts = line.split(",", 5);
         String name = parts[0];

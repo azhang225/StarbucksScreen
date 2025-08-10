@@ -65,6 +65,7 @@ public class Ingredients {
         String name = parts[1];
         int amount = Integer.parseInt(parts[2]);
         double cost = Double.parseDouble(parts[3]);
+        
         return new Ingredients(type, name, amount, cost);
     }
 }
